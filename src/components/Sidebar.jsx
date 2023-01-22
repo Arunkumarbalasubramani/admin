@@ -18,7 +18,9 @@ const Sidebar = () => {
           {/* Sidebar - Brand */}
           <Nav.Link
             className="sidebar-brand d-flex align-items-center justify-content-center"
-            href="index.html"
+            onClick={() => {
+              navigate("/");
+            }}
           >
             <div className="sidebar-brand-icon rotate-n-15">
               <i className="fas fa-laugh-wink" />
@@ -31,7 +33,12 @@ const Sidebar = () => {
           <hr className="sidebar-divider my-0" />
           {/* Nav Item - Dashboard */}
           <li className="nav-item active">
-            <Nav.Link className="nav-link">
+            <Nav.Link
+              className="nav-link"
+              onClick={() => {
+                navigate("/");
+              }}
+            >
               <i className="fas fa-fw fa-tachometer-alt" />
               <span>Dashboard</span>
             </Nav.Link>
