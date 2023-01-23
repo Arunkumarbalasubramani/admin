@@ -16,6 +16,7 @@ import {
   PageNotavailable,
   BlankPage,
   Charts,
+  Footer,
 } from "./components/exports.js";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -40,10 +41,11 @@ function App() {
             <Route path="/others" element={<Other />} />
             <Route path="/register" element={<Register />} />
             <Route path="/tables" element={<Tables />} />
-            <Route path="*" element={<PageNotavailable />} />
             <Route path="/newPage" element={<BlankPage />} />
             <Route path="/charts" element={<Charts />} />
+            <Route path="*" element={<PageNotavailable />} />
           </Routes>
+          <Footer />
         </div>
       </BrowserRouter>
     </div>

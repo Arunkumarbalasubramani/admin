@@ -57,7 +57,8 @@ const Sidebar = () => {
               aria-controls="collapseTwo"
               onClick={() => {
                 setComponents(!components);
-                navigate("/");
+                setUtilities(false);
+                setPages(false);
               }}
             >
               <i className="fas fa-fw fa-cog" />
@@ -98,7 +99,10 @@ const Sidebar = () => {
               data-target="#collapseUtilities"
               aria-expanded="true"
               aria-controls="collapseUtilities"
-              onClick={() => setUtilities(!utilities)}
+              onClick={() => {
+                setUtilities(!utilities);
+                setComponents(false);
+              }}
             >
               <i className="fas fa-fw fa-wrench" />
               <span>Utilities</span>
@@ -155,7 +159,11 @@ const Sidebar = () => {
               data-target="#collapsePages"
               aria-expanded="true"
               aria-controls="collapsePages"
-              onClick={() => setPages(!pages)}
+              onClick={() => {
+                setUtilities(false);
+                setComponents(false);
+                setPages(!pages);
+              }}
             >
               <i className="fas fa-fw fa-folder" />
               <span>Pages</span>
@@ -227,24 +235,6 @@ const Sidebar = () => {
           {/* Sidebar Toggler (Sidebar) */}
           <div className="text-center d-none d-md-inline">
             <button className="rounded-circle border-0" id="sidebarToggle" />
-          </div>
-          {/* Sidebar Message */}
-          <div className="sidebar-card d-none d-lg-flex">
-            <img
-              className="sidebar-card-illustration mb-2"
-              src="img/undraw_rocket.svg"
-              alt="..."
-            />
-            <p className="text-center mb-2">
-              <strong>SB Admin Pro</strong> is packed with premium features,
-              components, and more!
-            </p>
-            <Nav.Link
-              className="btn btn-success btn-sm"
-              href="https://startbootstrap.com/theme/sb-admin-pro"
-            >
-              Upgrade to Pro!
-            </Nav.Link>
           </div>
         </ul>
         {/* End of Sidebar */}

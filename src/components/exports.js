@@ -16,3 +16,4 @@ export { default as Tables } from "./Tables";
 export { default as PageNotavailable } from "./PageNotavailable";
 export { default as BlankPage } from "./BlankPage";
 export { default as Charts } from "./Charts";
+export { default as Footer } from "./Footer";

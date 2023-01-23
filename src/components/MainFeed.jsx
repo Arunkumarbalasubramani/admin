@@ -1,5 +1,54 @@
 import React from "react";
+import Chart from "chart.js/auto";
+import { Line } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  LineElement,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+} from "chart.js";
+ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement);
+
 const MainFeed = () => {
+  const data = {
+    labels: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
+    datasets: [
+      {
+        data: [
+          "0",
+          "10000",
+          "5000",
+          "15000",
+          "10000",
+          "20000",
+          "15000",
+          "25000",
+          "20000",
+          "30000",
+          "25000",
+        ],
+        backgroundColor: "#F6F8FD",
+        borderColor: "#4E73DF",
+        pointBorderColor: "#4E73DF",
+        fill: true,
+        tension: 0.4,
+      },
+    ],
+  };
   return (
     <div>
       {" "}
@@ -28,7 +77,7 @@ const MainFeed = () => {
                   <div className="card-body">
                     <div className="row no-gutters align-items-center">
                       <div className="col mr-2">
-                        <div className="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                        <div className="text-xs px-3 font-weight-bold text-primary text-uppercase mb-1">
                           Earnings (Monthly)
                         </div>
                         <div className="h5 mb-0 px-3 font-weight-bold text-gray-800">
@@ -48,7 +97,7 @@ const MainFeed = () => {
                   <div className="card-body">
                     <div className="row no-gutters align-items-center">
                       <div className="col mr-2">
-                        <div className="text-xs font-weight-bold text-success text-uppercase mb-1">
+                        <div className="text-xs font-weight-bold px-3  text-success text-uppercase mb-1">
                           Earnings (Annual)
                         </div>
                         <div className="h5 mb-0 font-weight-bold px-3  text-gray-800">
@@ -68,7 +117,7 @@ const MainFeed = () => {
                   <div className="card-body">
                     <div className="row no-gutters align-items-center">
                       <div className="col mr-2">
-                        <div className="text-xs font-weight-bold text-info text-uppercase mb-1">
+                        <div className="text-xs px-1 font-weight-bold text-info text-uppercase mb-1">
                           Tasks
                         </div>
                         <div className="row no-gutters align-items-center">
@@ -104,7 +153,7 @@ const MainFeed = () => {
                   <div className="card-body">
                     <div className="row no-gutters align-items-center">
                       <div className="col mr-2">
-                        <div className="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                        <div className="text-xs font-weight-bold px-3  text-warning text-uppercase mb-1">
                           Pending Requests
                         </div>
                         <div className="h5 mb-0 px-3 font-weight-bold text-gray-800">
@@ -162,7 +211,7 @@ const MainFeed = () => {
                   {/* Card Body */}
                   <div className="card-body">
                     <div className="chart-area">
-                      <canvas id="myAreaChart" />
+                      <Line data={data}></Line>
                     </div>
                   </div>
                 </div>
@@ -435,15 +484,6 @@ const MainFeed = () => {
           {/* /.container-fluid */}
         </div>
         {/* End of Main Content */}
-        {/* Footer */}
-        <footer className="sticky-footer bg-white">
-          <div className="container my-auto">
-            <div className="copyright text-center my-auto">
-              <span>Copyright © Your Website 2021</span>
-            </div>
-          </div>
-        </footer>
-        {/* End of Footer */}
       </div>
       {/* End of Content Wrapper */}
     </div>

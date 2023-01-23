@@ -3,14 +3,30 @@
 }
 .menu {
   // background: red;
-  flex: 1.5;
-  height: 150vh;
+  flex: 1;
+  height: 100vh;
 }
 .main {
   // background: green;
   flex: 7;
 }
-
+.default-btns {
+  display: flex;
+  gap: 10px;
+}
+.btn {
+  border-radius: 50%;
+}
+.boot-link {
+  text-decoration: none;
+  color: #4e73df;
+  :hover {
+    text-decoration: underline;
+  }
+}
+.loginContainer {
+  height: 100vh;
+}
 :root {
   --blue: #4e73df;
   --indigo: #6610f2;
@@ -10909,6 +10925,7 @@ a:focus {
 
 .sidebar hr.sidebar-divider {
   margin: 0 1rem 1rem;
+  background-color: white;
 }
 
 .sidebar .sidebar-heading {

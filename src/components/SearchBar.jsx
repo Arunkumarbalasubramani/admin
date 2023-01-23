@@ -158,7 +158,7 @@ const SearchBar = () => {
                 <div className="dropdown-list-image mr-3">
                   <img
                     className="rounded-circle"
-                    src="img/undraw_profile_1.svg"
+                    src="../assets/undraw_profile.svg"
                     alt="..."
                   />
                   <div className="status-indicator bg-success" />
