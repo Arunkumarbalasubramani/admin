@@ -1,4 +1,6 @@
 import React from "react";
+import DonoutChart from "./DonoutChart";
+import LineChart from "./LineChart";
 
 const Charts = () => {
   return (
@@ -31,7 +33,7 @@ const Charts = () => {
               </div>
               <div className="card-body">
                 <div className="chart-area">
-                  <canvas id="myAreaChart" />
+                  <LineChart />
                 </div>
                 <hr />
                 Styling for the area chart can be found in the
@@ -65,7 +67,7 @@ const Charts = () => {
               {/* Card Body */}
               <div className="card-body">
                 <div className="chart-pie pt-4">
-                  <canvas id="myPieChart" />
+                  <DonoutChart />
                 </div>
                 <hr />
                 Styling for the donut chart can be found in the

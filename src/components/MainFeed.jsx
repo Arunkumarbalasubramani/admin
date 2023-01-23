@@ -1,54 +1,8 @@
 import React from "react";
-import Chart from "chart.js/auto";
-import { Line } from "react-chartjs-2";
-import {
-  Chart as ChartJS,
-  LineElement,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-} from "chart.js";
-ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement);
+import DonoutChart from "./DonoutChart";
+import LineChart from "./LineChart";
 
 const MainFeed = () => {
-  const data = {
-    labels: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ],
-    datasets: [
-      {
-        data: [
-          "0",
-          "10000",
-          "5000",
-          "15000",
-          "10000",
-          "20000",
-          "15000",
-          "25000",
-          "20000",
-          "30000",
-          "25000",
-        ],
-        backgroundColor: "#F6F8FD",
-        borderColor: "#4E73DF",
-        pointBorderColor: "#4E73DF",
-        fill: true,
-        tension: 0.4,
-      },
-    ],
-  };
   return (
     <div>
       {" "}
@@ -211,7 +165,7 @@ const MainFeed = () => {
                   {/* Card Body */}
                   <div className="card-body">
                     <div className="chart-area">
-                      <Line data={data}></Line>
+                      <LineChart style={{ width: "650px" }} />
                     </div>
                   </div>
                 </div>
@@ -256,19 +210,8 @@ const MainFeed = () => {
                   </div>
                   {/* Card Body */}
                   <div className="card-body">
-                    <div className="chart-pie pt-4 pb-2">
-                      <canvas id="myPieChart" />
-                    </div>
-                    <div className="mt-4 text-center small">
-                      <span className="mr-2">
-                        <i className="fas fa-circle text-primary" /> Direct
-                      </span>
-                      <span className="mr-2">
-                        <i className="fas fa-circle text-success" /> Social
-                      </span>
-                      <span className="mr-2">
-                        <i className="fas fa-circle text-info" /> Referral
-                      </span>
+                    <div className="chart-pie ">
+                      <DonoutChart />
                     </div>
                   </div>
                 </div>
@@ -435,7 +378,7 @@ const MainFeed = () => {
                       <img
                         className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                         style={{ width: "25rem" }}
-                        src="img/undraw_posting_photo.svg"
+                        src="../assets/undraw_posting_photo.svg"
                         alt="..."
                       />
                     </div>
