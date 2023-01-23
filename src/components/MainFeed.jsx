@@ -1,4 +1,5 @@
 import React from "react";
+import { Nav } from "react-bootstrap";
 import DonoutChart from "./DonoutChart";
 import LineChart from "./LineChart";
 
@@ -15,13 +16,10 @@ const MainFeed = () => {
             {/* Page Heading */}
             <div className="d-sm-flex align-items-center justify-content-between mb-4">
               <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
-              <a
-                href="#"
-                className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
-              >
+              <Nav.Link className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                 <i className="fas fa-download fa-sm text-white-50" /> Generate
                 Report
-              </a>
+              </Nav.Link>
             </div>
             {/* Content Row */}
             <div className="row">
@@ -132,10 +130,9 @@ const MainFeed = () => {
                     <h6 className="m-0 font-weight-bold text-primary">
                       Earnings Overview
                     </h6>
-                    <div className="dropdown no-arrow">
-                      <a
+                    {/* <div className="dropdown no-arrow">
+                      <Nav.Link
                         className="dropdown-toggle"
-                        href="#"
                         role="button"
                         id="dropdownMenuLink"
                         data-toggle="dropdown"
@@ -143,24 +140,22 @@ const MainFeed = () => {
                         aria-expanded="false"
                       >
                         <i className="fas fa-ellipsis-v fa-sm fa-fw text-gray-400" />
-                      </a>
+                      </Nav.Link>
                       <div
                         className="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                         aria-labelledby="dropdownMenuLink"
                       >
                         <div className="dropdown-header">Dropdown Header:</div>
-                        <a className="dropdown-item" href="#">
-                          Action
-                        </a>
-                        <a className="dropdown-item" href="#">
+                        <Nav.Link className="dropdown-item">Action</Nav.Link>
+                        <Nav.Link className="dropdown-item">
                           Another action
-                        </a>
+                        </Nav.Link>
                         <div className="dropdown-divider" />
-                        <a className="dropdown-item" href="#">
+                        <Nav.Link className="dropdown-item">
                           Something else here
-                        </a>
+                        </Nav.Link>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                   {/* Card Body */}
                   <div className="card-body">
@@ -179,9 +174,8 @@ const MainFeed = () => {
                       Revenue Sources
                     </h6>
                     <div className="dropdown no-arrow">
-                      <a
+                      <Nav.Link
                         className="dropdown-toggle"
-                        href="#"
                         role="button"
                         id="dropdownMenuLink"
                         data-toggle="dropdown"
@@ -189,22 +183,20 @@ const MainFeed = () => {
                         aria-expanded="false"
                       >
                         <i className="fas fa-ellipsis-v fa-sm fa-fw text-gray-400" />
-                      </a>
+                      </Nav.Link>
                       <div
                         className="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                         aria-labelledby="dropdownMenuLink"
                       >
                         <div className="dropdown-header">Dropdown Header:</div>
-                        <a className="dropdown-item" href="#">
-                          Action
-                        </a>
-                        <a className="dropdown-item" href="#">
+                        <Nav.Link className="dropdown-item">Action</Nav.Link>
+                        <Nav.Link className="dropdown-item">
                           Another action
-                        </a>
+                        </Nav.Link>
                         <div className="dropdown-divider" />
-                        <a className="dropdown-item" href="#">
+                        <Nav.Link className="dropdown-item">
                           Something else here
-                        </a>
+                        </Nav.Link>
                       </div>
                     </div>
                   </div>
@@ -385,19 +377,23 @@ const MainFeed = () => {
                     <p>
                       Add some quality, svg illustrations to your project
                       courtesy of{" "}
-                      <a
+                      <Nav.Link
                         target="_blank"
                         rel="nofollow"
                         href="https://undraw.co/"
                       >
                         unDraw
-                      </a>
+                      </Nav.Link>
                       , a constantly updated collection of beautiful svg images
                       that you can use completely free and without attribution!
                     </p>
-                    <a target="_blank" rel="nofollow" href="https://undraw.co/">
+                    <Nav.Link
+                      target="_blank"
+                      rel="nofollow"
+                      href="https://undraw.co/"
+                    >
                       Browse Illustrations on unDraw →
-                    </a>
+                    </Nav.Link>
                   </div>
                 </div>
                 {/* Approach */}
